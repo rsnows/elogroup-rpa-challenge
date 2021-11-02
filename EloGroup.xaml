@@ -1,0 +1,753 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Sequence" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="976,9004" sap2010:WorkflowViewState.IdRef="Sequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="86">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="68">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Complete_Sequence" sap:VirtualizedContainerService.HintSize="986,8939" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="[nr_lote]" Name="nr_lote" />
+      <Variable x:TypeArguments="x:String" Name="token" />
+      <Variable x:TypeArguments="sd:DataTable" Name="tb_data" />
+      <Variable x:TypeArguments="x:String" Name="remessa_empty" />
+      <Variable x:TypeArguments="x:String" Name="situacao" />
+      <Variable x:TypeArguments="x:String" Name="cpff" />
+      <Variable x:TypeArguments="x:String" Name="output" />
+      <Variable x:TypeArguments="x:String" Name="rastreamento" />
+      <Variable x:TypeArguments="x:Int32" Name="cr_index" />
+      <Variable x:TypeArguments="ui:UiElement" Name="pedido_screen" />
+      <Variable x:TypeArguments="ui:UiElement" Name="ancestor" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="children" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="944,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[token]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">8d4d7a9e295d146b3b0e245692d8754e</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: EloGroup - RPA Challenge" sap:VirtualizedContainerService.HintSize="944,843" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="22f6bd02-c4c8-4841-b007-5d3ddc72d786" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,627" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Token'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="22f6bd02-c4c8-4841-b007-5d3ddc72d786" Text="[token]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://marcelstein.com/elochallenge/" DesignTimeRectangle="144, 612, 1078, 38" ElementType="InputBox" FriendlyName="'INPUT token'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="680eb3a7-774f-42a9-95f7-75833741a875" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABDoAAAAqCAYAAABStDsxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASDSURBVHhe7dwxj9NIGIDh+8G0lHTbbUe75Rb8BSQafsFpJQ6KQxQUCAFCogHRRD5/9tgZj8fZzRIWx/c80icRYk8SU80rm78aAAAAgI0QOgAAAIDNmISO7z9+Nu/ef2hu3rxt/v7nX2OMMcYYY4wxxphVTrSLaBjRMnJj6Ig34qAvX781u90u/S0AAADA+kS7iIYRLSOPHWPoiAoSBwAAAACci2gZ0TQGY+iIAuJODgAAAOCcRMuIpjEYQ0c83wIAAABwbvKmIXQAAAAAZ03oAAAAADZD6AAAAAA2Q+gAAAAANkPoAAAAADZD6AAAAAA2Q+gAAAAANkPoAAAAADbjD4WOz83zyyfNo+vX6fXd3Fy351y+bD6m1/9Ln142F4+fNs8/pdcAAADA6ISh43Vz9fhJ82g2tU250HFvQgcAAAAsOnnouHqVXg5ePeuDx5FR4066tZ81N+nlOfn44un9oo3QAQAAAIt+f+gI3eZ84b1fIXQAAAAAmYcJHa3usZPxro7+0ZWLF5/T61A8+tIeOz1nukb35/z4PHiksJKvdVB5fBEgpp81jQxdsCjXPxgj0mM7S5833AFTey/M1h6uWx58ims5WWN/7Se/6z7RBQAAAFbmwULH9A6GMnT05+bhozs+NuALoaNTu6NjFgJu+/9Ayu/dHn+93/TXP3O//vGho1e7o6P/zdPz+hhRRpzhmNpvm/87dGsU1z6u7f6Y+fUHAACAc/RgoaMLBAuho7bpD2VkuEvoiGNmG/ZaEBkcihLde+V5le9+ktCxdP2Kvx/XTsGiFksOfp9aHFn+NwAAAIBzsoo7OqpxonV86Eib+PZ7zGchdLS6deOYMhB06+dr7OfkoaMaVXqT65PWvqhEjjD+ltlMQ0d5vYUOAAAAtuDBQsdks/6bQ8fiXSUHZZFk+IxY/5bN/58JHe3ry/b8yvFL13JP6AAAAGC7HiZ0LASJPHTMN9kpPBwVOirHHCtf8z7BInRrHHvesY+upN9a/P7bg4XQAQAAwHb99tDRb8bLTX+x2R7uUsg2393Gu/27g6GjFiK6yFB8j/a4q2JjPyrfm8STFFuKAHBzncWF9N33n9dfh9tCRy3S9L95el73m/PPL37zLHak7zMNGe13Gq+b0AEAAMB2nTx07P9PiDTVuysqm+20QR/Oi/fKsDELHa1+ox+TbfZT7NjPNChMFJ87PzbFjuyYaiTIzy9iRF22bhYYpmu1U16/2dr7daZ3fWRrVI4XOgAAANiiE4aO06uFDQAAAIAlKw4d9UdhAAAAAJasI3TEoxaTOzfS4xgepQAAAACOsJI7Oir/v4fIAQAAABxpJaEDAAAA4NcJHQAAAMBmCB0AAADAZggdAAAAwGYIHQAAAMBmVEPHzZu3zW63S68AAAAA1i9aRjSNwRg63r3/0Hz5+i29AgAAAFi/aBnRNAZj6Pj+42dXQOIAd3YAAAAAaxbtIhpGtIxoGoMxdIR4IypIHBTPtxhjjDHGGGOMMcascaJdRMPII0eYhA4AAACAcyZ0AAAAABvRNP8BkkLzU4tBRkoAAAAASUVORK5CYII=" InformativeScreenshot="356e34201f55bf20015c6bc43568b2ff.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="144, 585, 33, 19" ElementType="Text" FriendlyName="'Token'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='Token' check:text='Token' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACUAAAAXCAYAAACMLIalAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVEhL7ZRBCoQwDAD3Kx724LPEgy/xoD8R+hTFZwj6iKxp0pq2omV1WQ8dEEzTmiENvuCBJKlYklQsSSqWS1KzqiBrRo7ug6T6FrJ3vvO0MOgN+/xWSjA0ORRq4eiYP0qNUMvuCQlHalJQrHl7lmO/4+YM1qFcBd3ESeZEaoGudCVlfpMi8brXyysYi2I4HqWCeX3VZ8ReHXPOcCwlPmbBDsgCjQrEN1kDSlK3gpzuqDu751LOxxGvAF6BJ27XnYc6dyRsuKFTPB+iEK7LzkmuS+kD7tXI/FaAZs8W01cSDjBygxRCYuYaZM4twPtMZ/1/H+/7SuoJJKlYklQsD5QC+ADMfmqF1UJCRwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Iniciar'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="22f6bd02-c4c8-4841-b007-5d3ddc72d786" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://marcelstein.com/elochallenge/" DesignTimeRectangle="144, 666, 68, 38" ElementType="Button" FriendlyName="'Iniciar'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' aaname='Iniciar' check:text='Iniciar' /&gt;" Guid="eacd18e4-4b9d-4f21-9c10-cd85b2a1b96e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAqCAYAAAAQ0R0WAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGlSURBVGhD7ZoxUoRAEEVNPJeH2tAqT8I1DPcGmpIZmphsaDj2Rz40Qze7ulIq/Ff1A+iB2X47QzQ3RSwiQWeYCHp6LeWuKeX2wQr3+wp6Ru9w4BkEobBHMXXgwEsaBMFe9MAeAxdkEKTVMwYuyCAoGrjnEAlKQiQoCZGgJESCkhAJSkIkKAmRoCREgpKQXxF0fLcJ3+JancbGFRt/CGprhlwtqLVn2+e4lkWCNhAiQUnIjwvC9jm99FuDVFuEY3iNHOx6Qr8Fu/dU2xFzehpX43jOX89zacgqgoC/hzH+h9aC2IxvtO2l1IIg8vg4Xnd19wfwXdeuarKOINcQ0q0O18REkDV7srJv2qcWNIvNDSi3FvbdkNW2mB+zKAgNLjQUCZptR2MiaEnohSH/ThDmm4yPVtCmBH1li1UyonvbE2TpmjJ84+FHOpDZrShj04IQSiJ8Z91w/f1p/voK2mqIBCUhEpSESFASIkFJiAQlIRKUhEhQEiJBScggSMdfxoTHX3SAakx4gEpH8D4DB+ERPIAC7O1RFHpG714OmAgScyRokVI+AO/qyU2m507UAAAAAElFTkSuQmCC" InformativeScreenshot="f1554379b3aa8d363c06d5bc62e873c3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="334,81" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMSSURBVDhPZVNvTI1xFH7uvZVKLGXrpqSr8cFqFcsWk7YKm82fSnc1a6Fu61YrW+GKW1OIS5NoYm01WURCsUXC8MWfZdKM1SfLNH83fMjweOouHzjvnvd9t985zznnOb+DKVvk/hjT9esCHKeAO+eBVy1CNvBgFrBP5xuF5YJF8BbcliLMAXzkseU2MPAEGH9pMnHAw4MOHx8uDTZzpt/0H3L7IrwVnglHhVCs1dtfbPXAjkHg85inJ/tiY9mVn8/ylBQW5uWxYq+Laek2zp4dRLlP4btQMPlXAWQOAB++6uCNvz9v7d/PvdXVtGZlsbX1HK3WXczOrmJy8gYaDH8JJiqqQCIQ1gPcH1XmYYuF37y8+CI0lOmRkUxSBR0dHWxp6WJz8zWWlzsYFmahh4fnBME3IUcPcruBr70REbx67BivR0fzkzLckAbLAgNZUFgokgvs6enmgQMnmJPjZHx8Er2MhvEAYA8OAk2Pgd93N2/m65ER1qv0ewkJ/KhKLoooWiJaRF5ZWUmX6wzt9lrudNRwoY83k4GbOALceG4w8JHTydGxMdapijKbja1qZ0QEbcJCTWOT1crOzsu81XeXpXk2bjUZmQ88QS3Q/VQE3VK9obFRYmUzZO5cBihot4I1GTYLiyXuqjVraCsoYMXq1TylFrcBj1GoFi4Bv5xRUSwrK2NRURFjYmImlQ6UsI3z5/OZ2jktwo0a756qKp5ITeVhnetWXUMmkN4FfKydMYNBAQEak4EmsUeob3NwMEtzc3k2Lo79CmgPCWFzSQld4eHcoXuQBBQjEgg8Dly2ymEi6xRS09KYkZExqUmlKjupCntVSbuvL+uUYCvwcB4QgTp5bwASw4HhqeBZfn7MysxkfUMDB4eG2NffzyaHg21mMxt1XgK8WwFsku9fMxqBjAkS7QVLvb25fcECtkvQK3Y7z0i0Qwp2KXOxdkHjsytmmipwm9n9Ma0EVsqhsxp4XwP8bBKZ2qNTItu0J9rK3nhgnXy9gt0x/1uINFmirhKAk2qtcz3QpYz1UdqXUOCfOOAPd/Rqo6OCYEIAAAAASUVORK5CYII=" InformativeScreenshot="7c67664ee18768a2eb898fdfaea66b00.png" Selector="&lt;html app='msedge.exe' url='http://marcelstein.com/elochallenge/' /&gt;" Url="http://marcelstein.com/elochallenge/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: EloGroup - RPA Challenge - Controle de Pedidos" sap:VirtualizedContainerService.HintSize="944,7864" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="ce31c7c0-0436-4b47-a979-0f1ca5b972b6" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="910,7648" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Lote" sap:VirtualizedContainerService.HintSize="868,156" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="ce31c7c0-0436-4b47-a979-0f1ca5b972b6" Version="V1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="http://marcelstein.com/elochallenge/starttest.php?token=8d4d7a9e295d146b3b0e245692d8754e" DesignTimeRectangle="323, 375, 898, 24" ElementType="Text" FriendlyName="'535037'" FullSelectorArgument="&lt;webctrl id='lblnumLote' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='lblnumLote' tag='DIV' type='' /&gt;" Guid="35894f34-201b-428b-8288-bde9b19d926e" InformativeScreenshot="5aabb40a50874206bf4f6b1cc196aa13.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge - Controle de Pedidos' /&gt;" SearchSteps="FuzzySelector" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="x:String">[nr_lote]</OutArgument>
+              </uix:NGetText.Text>
+            </uix:NGetText>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[tb_data]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='New column 0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='New column 1'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='New column 2'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='New column 3'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='New column 4'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='text'&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='5' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="868,156" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="ce31c7c0-0436-4b47-a979-0f1ca5b972b6" Version="V1">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="113, 195, 1140, 4361" FriendlyName="'RPA Challenge'" FullSelectorArgument="&lt;webctrl tag='MAIN' /&gt;" Guid="d7beff5b-3140-411d-bd37-eb10c465451e" InformativeScreenshot="daccfd1a355f8286ecd60ff2c90d7d9e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge - Controle de Pedidos' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: ST Logística - Rastreamento de Pacotes v1.00" sap:VirtualizedContainerService.HintSize="868,6966" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="d00517a8-82cc-49e2-970e-57f10ccb2da7" Version="V1">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="834,6677" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="792,6583" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Número do lote'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="750,216" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d00517a8-82cc-49e2-970e-57f10ccb2da7" Text="[nr_lote]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="131, 122, 193, 21" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd cls='Edit' idx='3' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Edit' /&gt;" Guid="291ba52d-5508-4d8b-95d7-6788b4f0a847" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMUAAAAZCAYAAACBxOqkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB3SURBVHhe7dPRCYBAEEPBLdtObeM6OD8UxahYwM5AIA28GmNMM7smCrPYGUUtq1nrvUYBXYkCwm8UVXU86EEUEEQBQRQQRAFBFBBEAUEUEEQBQRQQRAFBFBBEAeE3CuhGFBBEAUEUED6jMOu8RxRmtk8UZreNuQFrvyMD75LUnQAAAABJRU5ErkJggg==" InformativeScreenshot="0e5f6f75ba718bcfe936c040816b60d7.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='stlog.exe' cls='AutoIt v3 GUI' title='ST Logística - Rastreamento de Pacotes v1.00' /&gt;" SearchSteps="FuzzySelector, Image">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="27, 122, 79, 17" ElementType="Text" FriendlyName="'Número do lote'" FullSelectorArgument="&lt;wnd cls='Static' title='Número do lote:' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Static' title='Número do lote:' check:text='Número do lote:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAVCAYAAAA6s9JxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGiSURBVFhH7VXRDcQgCHUcx2Ecx3Ecx+kGHFhp1aJtcySXS/x4KdIH0qdQt20bLthgiWmIJaYhlpiGOMVMAb3zGFJFYJ8PmGRNSMGjg3hyfgGlriHecL9EJ6ZDV298KSRh8J3gv4ClmIZit2JS0gAeIbY+i41M8S9ipjq55rv4AYEOwNGt9iHmw3A0LiCmgwuebny+9bDf6iYOMHacKPvUqDieuuPooLvYvNeIy50ma51zdmFE4Folr4KrmGRHuZ3iqwuqufyUOdvbmd+NhT4uC75/kIivz+SOE6F8/IPYphaFe7yXfZR6JdcNVDHzKbAtvj6p5tdsfvIJN2ARB3HaesZ5E/skB9tavcftnGMg5n5yHuBdIb3NT601RnHaesZ5E/skB9s3rTzDUMx9RtDJZN8+L+SEuM3UQi52aa2wt5b6AU9aVePU+U3bXKlXct1gImZddLHLtQftxg5tHhmlZWSg93vR+uRU/hock/enHxDN9HqvaWxTi8aln2b2lRup1Vt4z39AC19jiWmIJaYhlpiGWGIaYolpiCWmIZaYZtjwA7ov2ptsPpa1AAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click 'Carregar Lote'" sap:VirtualizedContainerService.HintSize="750,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d00517a8-82cc-49e2-970e-57f10ccb2da7" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="27, 146, 299, 25" ElementType="Button" FriendlyName="'Carregar Lote'" FullSelectorArgument="&lt;wnd cls='Button' title='Carregar Lote' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Button' title='Carregar Lote' check:text='Carregar Lote' /&gt;" Guid="c8fdb51d-a2e6-4ead-bde1-2ec7909e5839" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAS8AAAAdCAYAAAD7G+rKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIOSURBVHhe7drRkYMgFIVhq6EZqqEZukgFVJMO0gELRBTuQszObmZF/odvooBXXnIGSJbH4+EBYDSEF4AhEV4AhlSF1+12A4DTKvPqW3jd73cAOB3CC8CQCC8AQyK8AAyJ8AIwJMILwJAIr8k4o71aFr9ESnltXXPcv3PGK2W8a/UBAeE1EWdUCCzjrVvbnPV6Ud7k+zP5SXgRdFMivKbhvAkrrVMGVQvhhQOE1yyOvuC22E6G1Zi2oS09o73WYcWWtpn5WofVm/Fa5e2n3kOxan+u9NI7D+uHmuV8evMV77UplPP9Or43N1wK4TWLXhi05LHxM24r47lYeS1XcVvtZ5Bs52i9d7bq98ZU7XX9tA3WVoztzS3XwFUQXrM4+hKHfh1XSnl1lMMlPyOv87hNDCHxDvHMy/pSq0+25fuyPV5X84qKMMNlEF7TECuSynpwL1dMMhSqgBDbPDmmun+jvtTq69Uv2+N1a264HMJrIv1fG+PnfjYU/07xcuWVt29Gbg/FtjGec6X2N+pLzb53t42tuZV1cAWE12Sq/3mF4NqDYG9XcXsnw0WGQAy8EBKpjjiw3+rnOu/Ul8o62RpU+3vzszYF1nbo35sbLoXwwse4sPJKgdPoA36L8MKfsvlvFax68GGEF4AhEV4AhkR4ARgS4QVgSIfhBQBnVeZVFV4AMArCC8CQCC8AA3r4Lws6z0F3c+aNAAAAAElFTkSuQmCC" InformativeScreenshot="84818ea4ff14194e080ad839c46354eb.png" ScopeSelectorArgument="&lt;wnd app='stlog.exe' cls='AutoIt v3 GUI' title='ST Logística - Rastreamento de Pacotes v1.00' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[tb_data]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="750,6037" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                        <ui:ForEachRow.Body>
+                          <ActivityAction x:TypeArguments="sd:DataRow">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="716,5916" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="0" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="674,185" sap2010:WorkflowViewState.IdRef="GetRowItem_1" Row="[row]">
+                                <ui:GetRowItem.Value>
+                                  <OutArgument x:TypeArguments="x:String">[output]</OutArgument>
+                                </ui:GetRowItem.Value>
+                              </ui:GetRowItem>
+                              <ui:GetRowItem Column="{x:Null}" ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="674,185" sap2010:WorkflowViewState.IdRef="GetRowItem_2" Row="[row]">
+                                <ui:GetRowItem.Value>
+                                  <OutArgument x:TypeArguments="x:String">[rastreamento]</OutArgument>
+                                </ui:GetRowItem.Value>
+                              </ui:GetRowItem>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Código referência'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="674,216" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d00517a8-82cc-49e2-970e-57f10ccb2da7" Text="[output]" Version="V1">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="131, 234, 193, 21" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd cls='Edit' idx='2' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Edit' /&gt;" Guid="4e198180-d198-451d-abbc-c52356767555" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMUAAAAZCAYAAACBxOqkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVHhe7dNBDYAwAMBAdE/1HMCDBEIBBbtLKqHbnHOXdGcKKV1TjDGkpfucAlZlCghTQJgCwhQQpoAwBYQpIEwBYQoIU0CYAsIUEKaAMAWEKSBMAWEKCFNA/E4hrdxrCklnppAezf0Aqdp9NHmSElwAAAAASUVORK5CYII=" InformativeScreenshot="c4aaf0e7b9fbf8bdf0665c64be1728bb.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='stlog.exe' cls='AutoIt v3 GUI' title='ST Logística - Rastreamento de Pacotes v1.00' /&gt;" SearchSteps="FuzzySelector, Image">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="27, 234, 90, 17" ElementType="Text" FriendlyName="'Código referência'" FullSelectorArgument="&lt;wnd cls='Static' title='Código referência:' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Static' title='Código referência:' check:text='Código referência:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAAAVCAYAAADPTVnBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH4SURBVFhH7VfRscQgCLQb27Eb27Ecy0kHPjBigKjJvbnEj/NjZ05YEVfEnNm2LS28jyX8JCzhJ2EJPwlC+OhdssYkg7A2uRAFOXqbjAvCVhF9stan2PI9hOAgH8jVhba/CcwT5lgv9/Y2qvBZVBAuxOKMITljk6fxFpOHwzjGCiT8aweA+bkUmr4+gsODgrmjvYzwpf1V4Yei3sHbFf/2el9GFX64Cdiks9SCWJUxu4WDwxsjKl7MK/5RPEKO4ZLLrQT8iu/zbSxjqvoT506cg+NL2zJwy2vrwnWIn+3QnjK/7COw1szn3biNN4THFoPXc++JR59XdkhCCi/9R8K9eGxN5GKbyxzV4igOF2DEuROHREU7isnzpLeAWm/g6zKIfK5xLbwOyBMe2T+dR2Ntw9+1qo7qEgJ8i8PX5jlwcDv8xreixmvxO7ju8TqBXmLa/uk8Gmsb/m5d2yc4fKzt2p/bCR4c3YgOv4MqfP+rptcaGnaRsPSfrvApXlkXITahr3zxPcJh9hNft5q9j1Ox4qf4vyoeIb7jYZEqGiRzPEoqycK38DidNsL8/ce1kSyPkcewycrnj+ITHDbmfNKD+ble9eMix9kP5dbj+jTy49v78/WDeFT4UD/RWIU1eL+I1yp+QWIJPwlL+ElYwk/CEn4SlvBTsKU/OB/OOV93NMwAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Localizar remessa'" sap:VirtualizedContainerService.HintSize="674,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d00517a8-82cc-49e2-970e-57f10ccb2da7" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable DesignTimeRectangle="27, 258, 299, 25" ElementType="Button" FriendlyName="'Localizar remessa'" FullSelectorArgument="&lt;wnd cls='Button' title='Localizar remessa' /&gt;" FuzzySelectorArgument="&lt;wnd cls='Button' title='Localizar remessa' check:text='Localizar remessa' /&gt;" Guid="0443a237-46c0-407b-9beb-a6ced79583c5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAS8AAAAdCAYAAAD7G+rKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJXSURBVHhe7djNccMgEIbh9K4CVAANqADdrQJcjDsg/C1aYbAOmWS0ynt4JsqaRfjAN+Cv1+vlAcAawguASYQXAJMO4fV4PADgsnRevYXX8/kEgMshvACYRHgBMInwAmAS4QXAJMILgEmE1x1si5/nxW+9z37qN+cGfoDwuoO/CC9CDBdDeN0BJy/8Q4TXHYwCJtTdPPlpCmbn11pf9/o0e7duub46P6ea1PMc7clrdTImKvMOe513bt7Hpfc39Wady9aOmfy8rH5Jz2q9vb5Q35bck8YueWyv1l1zrMMEwusO0kZvw2vzS9jYstHT5nXrXpcNHIMsbFzZ+JXM2f5VY/Y5VV+ke+LcEjb681qP61Hvb3slyPRzWseg7xm/TwnK1Befe7XSJ2p/U8dlEV530Nt4bU3+/7RJw2cuBEI+iQR6fG8+HQKfemWMGlvraZ7SU8Vga8a0z6O+LYfzFNbiwmltS+HWq+W53tYc6zCB8LoDvblHNb3pu5u0nMDUleww/tBXTm/1mnXSm8Youh6fz05CvedRnwgnynzN1AGra4M1y1hcHuF1B92NJwGTN+f5tTFfreQati1uePJ6vy6e9NZxxaHeruf9fYfx9XnQJ6FUT1zy3Xq1zprjXDCB8LqDuHEP16cghkuo7z9oq40ZN67Uw6beA27/AXuO16nYI6HQhEZ9TwmFj73y3vr+pq7Xc/jBvowZPnf6Qv2wlhJupzVZc5wXJhBeAEwivACYRHgBMInwAmAS4QXAJMILgEmn4QUAV6Xz6hBeAGAF4QXAJMILgEEv/w3sX2IEkO1L8gAAAABJRU5ErkJggg==" InformativeScreenshot="211a8fa83b8d94158eee5c78a5c390a6.png" ScopeSelectorArgument="&lt;wnd app='stlog.exe' cls='AutoIt v3 GUI' title='ST Logística - Rastreamento de Pacotes v1.00' /&gt;" SearchSteps="Selector, FuzzySelector, Image" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <ui:WaitUiElementAppear WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="Find Element 'DIV'" FoundElement="[pedido_screen]" sap:VirtualizedContainerService.HintSize="674,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                                <ui:WaitUiElementAppear.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ec78139b-8a2d-4e1f-91a2-4e300a1640a0" InformativeScreenshot="2bcd9789d0252f78188e5237c787556e">
+                                    <ui:Target.Selector>
+                                      <InArgument x:TypeArguments="x:String">
+                                        <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_9">String.Format("&lt;html app='msedge.exe' title='EloGroup - RPA Challenge - Controle de Pedidos' /&gt;&lt;webctrl aaname='{0}' tag='DIV' /&gt;", output)</mca:CSharpValue>
+                                      </InArgument>
+                                    </ui:Target.Selector>
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:WaitUiElementAppear.Target>
+                              </ui:WaitUiElementAppear>
+                              <ui:GetAncestor Ancestor="[ancestor]" DisplayName="Get Ancestor" sap:VirtualizedContainerService.HintSize="674,68" sap2010:WorkflowViewState.IdRef="GetAncestor_1" UpLevels="1">
+                                <ui:GetAncestor.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[pedido_screen]" Id="b4814741-ecae-4eca-87f1-a37bf8bee464">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:GetAncestor.Target>
+                              </ui:GetAncestor>
+                              <ui:FindChildren Children="[children]" DisplayName="Find Children" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="674,68" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
+                                <ui:FindChildren.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" Element="[ancestor]" Id="68955a87-c97e-47b3-b6cd-babf6f64b6d3">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:FindChildren.Target>
+                              </ui:FindChildren>
+                              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="6aa3165d-6fac-4f78-9461-f00d1c09489a" DisplayName="CV Screen Scope 'dialog ST'" sap:VirtualizedContainerService.HintSize="674,477" sap2010:WorkflowViewState.IdRef="CVScope_3" Version="V3">
+                                <p:CVScope.Body>
+                                  <ActivityAction x:TypeArguments="x:Object">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <p:CvGetTextWithDescriptor DesignTimeCacheId="6aa3165d-6fac-4f78-9461-f00d1c09489a" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_6" InformativeScreenshot="da5d6705e83672e19c1d758abd235c4c" RefreshBefore="True" Result="[situacao]" Version="V3">
+                                        <p:CvGetTextWithDescriptor.Descriptor>
+                                          <InArgument x:TypeArguments="uc:CvDescriptor">
+                                            <mca:CSharpValue x:TypeArguments="uc:CvDescriptor" sap2010:WorkflowViewState.IdRef="CSharpValue`1_6" xml:space="preserve">"Target: AnyText (352,194,59,16)" +
+"Anchor: Text 'Destinatario:' (351,144,59,12)"</mca:CSharpValue>
+                                          </InArgument>
+                                        </p:CvGetTextWithDescriptor.Descriptor>
+                                        <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                          <uc:CvDescriptor>
+                                            <uc:CvDescriptor.Anchors>
+                                              <x:Array Type="uc:CvElementDescriptor">
+                                                <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="351, 144, 59, 12" ElementType="Text" Text="Destinatario:" />
+                                              </x:Array>
+                                            </uc:CvDescriptor.Anchors>
+                                            <uc:CvDescriptor.Target>
+                                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="352, 194, 59, 16" ElementType="AnyText" />
+                                            </uc:CvDescriptor.Target>
+                                          </uc:CvDescriptor>
+                                        </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                      </p:CvGetTextWithDescriptor>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </p:CVScope.Body>
+                                <p:CVScope.DesignTimeCache>
+                                  <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+                                </p:CVScope.DesignTimeCache>
+                                <p:CVScope.DesignTimeCacheContainer>
+                                  <uc:CvCacheContainer>
+                                    <uc:CvCacheContainer.Caches>
+                                      <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                        <uc:CVCache DisplayName="Screen CV Get Text - '' (Main)" Id="6aa3165d-6fac-4f78-9461-f00d1c09489a" InformativeScreenshot="26c77976745fa49f9c816c685b150dc6" LogicalPosition="634, 376" OcrText="ST Logistica Alterar lote Informacao da remessa Numero do lote: 394282 Remessa: Codigo de referencia da loja: 03-00001190 003028682 Caregar Lote Destinatario: CPF: Pesquisar remessas Giovanna Moura 578.571.108-28 Codigo da remessa: Postado Codigo referencia: 003028682 Localizar remessa" Position="634, 376" ScreenshotGuid="f992cba7-5d07-47df-a36c-b77df7f8d0cc" ServerVersion="1">
+                                          <uc:CVCache.CvUiElements>
+                                            <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                                              <uc:CvElementInfo Category="InputBox" Region="352, 111, 193, 23" />
+                                              <uc:CvElementInfo Category="InputBox" Region="127, 95, 195, 22" />
+                                              <uc:CvElementInfo Category="Button" Region="25, 232, 296, 24" />
+                                              <uc:CvElementInfo Category="InputBox" Region="351, 160, 195, 22" />
+                                              <uc:CvElementInfo Category="InputBox" Region="127, 184, 195, 21" />
+                                              <uc:CvElementInfo Category="InputBox" Region="127, 208, 194, 21" />
+                                              <uc:CvElementInfo Category="Button" Region="25, 121, 298, 23" />
+                                              <uc:CvElementInfo Category="InputBox" Region="558, 111, 174, 22" />
+                                              <uc:CvElementInfo Category="InputBox" Region="562, 159, 171, 22" />
+                                              <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="25, 233, 304, 24" />
+                                            </scg:List>
+                                          </uc:CVCache.CvUiElements>
+                                          <uc:CVCache.OcrTexts>
+                                            <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                                              <uc:OcrTextInfo Region="17, 15, 65, 40" Text="ST" />
+                                              <uc:OcrTextInfo Region="89, 14, 212, 50" Text="Logistica" />
+                                              <uc:OcrTextInfo Region="23, 72, 32, 12" Text="Alterar" />
+                                              <uc:OcrTextInfo Region="55, 72, 20, 12" Text="lote" />
+                                              <uc:OcrTextInfo Region="352, 72, 54, 14" Text="Informacao" />
+                                              <uc:OcrTextInfo Region="407, 72, 14, 12" Text="da" />
+                                              <uc:OcrTextInfo Region="422, 75, 41, 9" Text="remessa" />
+                                              <uc:OcrTextInfo Region="22, 96, 39, 12" Text="Numero" />
+                                              <uc:OcrTextInfo Region="62, 96, 14, 12" Text="do" />
+                                              <uc:OcrTextInfo Region="76, 96, 23, 12" Text="lote:" />
+                                              <uc:OcrTextInfo Region="129, 99, 39, 12" Text="394282" />
+                                              <uc:OcrTextInfo Region="351, 96, 48, 12" Text="Remessa:" />
+                                              <uc:OcrTextInfo Region="558, 96, 35, 14" Text="Codigo" />
+                                              <uc:OcrTextInfo Region="593, 96, 15, 12" Text="de" />
+                                              <uc:OcrTextInfo Region="608, 96, 50, 12" Text="referencia" />
+                                              <uc:OcrTextInfo Region="658, 96, 15, 12" Text="da" />
+                                              <uc:OcrTextInfo Region="674, 96, 21, 14" Text="loja:" />
+                                              <uc:OcrTextInfo Region="353, 115, 66, 12" Text="03-00001190" />
+                                              <uc:OcrTextInfo Region="561, 115, 57, 12" Text="003028682" />
+                                              <uc:OcrTextInfo Region="139, 126, 43, 14" Text="Caregar" />
+                                              <uc:OcrTextInfo Region="182, 126, 23, 12" Text="Lote" />
+                                              <uc:OcrTextInfo Region="351, 144, 59, 12" Text="Destinatario:" />
+                                              <uc:OcrTextInfo Region="558, 144, 26, 12" Text="CPF:" />
+                                              <uc:OcrTextInfo Region="24, 161, 47, 13" Text="Pesquisar" />
+                                              <uc:OcrTextInfo Region="72, 163, 46, 9" Text="remessas" />
+                                              <uc:OcrTextInfo Region="354, 164, 47, 11" Text="Giovanna" />
+                                              <uc:OcrTextInfo Region="403, 164, 31, 11" Text="Moura" />
+                                              <uc:OcrTextInfo Region="562, 163, 77, 12" Text="578.571.108-28" />
+                                              <uc:OcrTextInfo Region="23, 184, 34, 14" Text="Codigo" />
+                                              <uc:OcrTextInfo Region="58, 184, 14, 12" Text="da" />
+                                              <uc:OcrTextInfo Region="73, 187, 44, 9" Text="remessa:" />
+                                              <uc:OcrTextInfo Region="352, 194, 59, 16" Text="Postado" />
+                                              <uc:OcrTextInfo Region="22, 208, 35, 14" Text="Codigo" />
+                                              <uc:OcrTextInfo Region="58, 208, 52, 12" Text="referencia:" />
+                                              <uc:OcrTextInfo Region="129, 211, 56, 12" Text="003028682" />
+                                              <uc:OcrTextInfo Region="130, 238, 44, 12" Text="Localizar" />
+                                              <uc:OcrTextInfo Region="174, 241, 41, 9" Text="remessa" />
+                                            </scg:List>
+                                          </uc:CVCache.OcrTexts>
+                                        </uc:CVCache>
+                                      </scg:List>
+                                    </uc:CvCacheContainer.Caches>
+                                  </uc:CvCacheContainer>
+                                </p:CVScope.DesignTimeCacheContainer>
+                                <p:CVScope.OCREngine>
+                                  <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                    <ActivityFunc.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                                    </ActivityFunc.Argument>
+                                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Language="en" Profile="Screen" Scale="1" Timeout="100000">
+                                      <p1:UiPathScreenOCR.Image>
+                                        <InArgument x:TypeArguments="sd1:Image">
+                                          <mca:CSharpValue x:TypeArguments="sd1:Image" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">Image</mca:CSharpValue>
+                                        </InArgument>
+                                      </p1:UiPathScreenOCR.Image>
+                                    </p1:UiPathScreenOCR>
+                                  </ActivityFunc>
+                                </p:CVScope.OCREngine>
+                                <p:CVScope.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9910be93-ab2b-42bb-8fa6-94bde979ac1e" InformativeScreenshot="c4397f1d4e37fa5f754f76a65b08457f" Selector="&lt;ctrl name='ST Logística - Rastreamento de Pacotes v1.00' role='dialog' /&gt;" WaitForReady="INTERACTIVE">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                  </ui:Target>
+                                </p:CVScope.Target>
+                                <p:CVScope.UseLocalServer>
+                                  <InArgument x:TypeArguments="x:Boolean" />
+                                </p:CVScope.UseLocalServer>
+                              </p:CVScope>
+                              <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="674,2283" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[children]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="ui:UiElement">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="ui:UiElement" Name="child" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,2158" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="bariable" />
+                                        <Variable x:TypeArguments="x:String" Name="situ" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <uix:NGetAttribute Attribute="tag" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="562,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_2" InUiElement="[child]" Version="V1">
+                                        <uix:NGetAttribute.Result>
+                                          <OutArgument x:TypeArguments="x:String">[situ]</OutArgument>
+                                        </uix:NGetAttribute.Result>
+                                      </uix:NGetAttribute>
+                                      <If Condition="[situ = &quot;SELECT&quot;]" sap:VirtualizedContainerService.HintSize="562,1838" sap2010:WorkflowViewState.IdRef="If_4">
+                                        <If.Then>
+                                          <Sequence sap:VirtualizedContainerService.HintSize="526,1660" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If Condition="[situacao = &quot;Postado&quot;]" sap:VirtualizedContainerService.HintSize="484,408" sap2010:WorkflowViewState.IdRef="If_5">
+                                              <If.Then>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,230" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NSelectItem DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NSelectItem_1" InUiElement="[child]" Item="Postado" Version="V1" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="484,1118" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                                              <ui:IfElseIf.ConditionBlocks>
+                                                <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                                  <ui:IfElseIfBlock BlockType="If" Condition="[situacao = &quot;Em&quot;]">
+                                                    <ui:IfElseIfBlock.Then>
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,228" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NSelectItem DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NSelectItem_2" InUiElement="[child]" Item="Em transferência" Version="V1" />
+                                                      </Sequence>
+                                                    </ui:IfElseIfBlock.Then>
+                                                  </ui:IfElseIfBlock>
+                                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[situacao = &quot;Saiu&quot;]">
+                                                    <ui:IfElseIfBlock.Then>
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,228" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NSelectItem DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NSelectItem_3" InUiElement="[child]" Item="Saiu para entrega" Version="V1" />
+                                                      </Sequence>
+                                                    </ui:IfElseIfBlock.Then>
+                                                  </ui:IfElseIfBlock>
+                                                  <ui:IfElseIfBlock BlockType="ElseIf" Condition="[situacao = &quot;Recebido&quot;]">
+                                                    <ui:IfElseIfBlock.Then>
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,228" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <uix:NSelectItem DisplayName="Select Item" sap:VirtualizedContainerService.HintSize="334,136" sap2010:WorkflowViewState.IdRef="NSelectItem_4" InUiElement="[child]" Item="Recebido pelo destinatário" Version="V1" />
+                                                      </Sequence>
+                                                    </ui:IfElseIfBlock.Then>
+                                                  </ui:IfElseIfBlock>
+                                                </sc:BindingList>
+                                              </ui:IfElseIf.ConditionBlocks>
+                                            </ui:IfElseIf>
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                              </ui:ForEach>
+                              <If Condition="[rastreamento = String.Empty]" sap:VirtualizedContainerService.HintSize="674,1718" sap2010:WorkflowViewState.IdRef="If_2">
+                                <If.Then>
+                                  <Sequence sap:VirtualizedContainerService.HintSize="638,1540" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="e14f5692-a3d6-47f6-a2ea-3b293e0ff44c" DisplayName="CV Screen Scope 'stlog.exe ST'" sap:VirtualizedContainerService.HintSize="596,1446" sap2010:WorkflowViewState.IdRef="CVScope_2" Version="V3">
+                                      <p:CVScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                            <p:CvGetTextWithDescriptor DesignTimeCacheId="e14f5692-a3d6-47f6-a2ea-3b293e0ff44c" DesignTimeScaleFactor="1" DisplayName="CV Get Text - InputBox" sap:VirtualizedContainerService.HintSize="562,166" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_4" InformativeScreenshot="cc6123d56b2ad28504c7c0a88d835fef" RefreshBefore="True" Result="[remessa_empty]" Version="V3">
+                                              <p:CvGetTextWithDescriptor.Descriptor>
+                                                <InArgument x:TypeArguments="uc:CvDescriptor">
+                                                  <mca:CSharpValue x:TypeArguments="uc:CvDescriptor" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4" xml:space="preserve">"Target: InputBox (354,137,192,22)" +
+"Anchor: Text 'Remessa:' (352,122,48,12)"</mca:CSharpValue>
+                                                </InArgument>
+                                              </p:CvGetTextWithDescriptor.Descriptor>
+                                              <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                                <uc:CvDescriptor>
+                                                  <uc:CvDescriptor.Anchors>
+                                                    <x:Array Type="uc:CvElementDescriptor">
+                                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="352, 122, 48, 12" ElementType="Text" Text="Remessa:" />
+                                                    </x:Array>
+                                                  </uc:CvDescriptor.Anchors>
+                                                  <uc:CvDescriptor.Target>
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="354, 137, 192, 22" ElementType="InputBox" />
+                                                  </uc:CvDescriptor.Target>
+                                                </uc:CvDescriptor>
+                                              </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                            </p:CvGetTextWithDescriptor>
+                                            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="562,905" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[children]">
+                                              <ui:ForEach.Body>
+                                                <ActivityAction x:TypeArguments="ui:UiElement">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ui:UiElement" Name="child" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,782" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Name="bariable" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uix:NGetAttribute Attribute="tag" DisplayName="Get Attribute" sap:VirtualizedContainerService.HintSize="484,186" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" InUiElement="[child]" Version="V1">
+                                                      <uix:NGetAttribute.Result>
+                                                        <OutArgument x:TypeArguments="x:String">[bariable]</OutArgument>
+                                                      </uix:NGetAttribute.Result>
+                                                    </uix:NGetAttribute>
+                                                    <If Condition="[bariable = &quot;INPUT&quot;]" sap:VirtualizedContainerService.HintSize="484,464" sap2010:WorkflowViewState.IdRef="If_3">
+                                                      <If.Then>
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="376,288" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,196" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InUiElement="[child]" Text="[remessa_empty]" Version="V1" />
+                                                        </Sequence>
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </Sequence>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </ui:ForEach.Body>
+                                            </ui:ForEach>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </p:CVScope.Body>
+                                      <p:CVScope.DesignTimeCache>
+                                        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" />
+                                      </p:CVScope.DesignTimeCache>
+                                      <p:CVScope.DesignTimeCacheContainer>
+                                        <uc:CvCacheContainer>
+                                          <uc:CvCacheContainer.Caches>
+                                            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                                              <uc:CVCache DisplayName="Screen CV Get Text - '' (Main)" Id="e14f5692-a3d6-47f6-a2ea-3b293e0ff44c" InformativeScreenshot="98acf13402ee5ebd099ca6f10fa2e697" LogicalPosition="633, 350" OcrText="STLogistica - Rastreamento de Pacotes v1.00 1 X ST Logistica Alterar lote Informacao da remessa Numero do lote: 671282 Remessa: Codigo de referencia da loja: 03-00003125 001388835 Caregar Lote Destinatario: CPF: Pesquisar remessas Lorena Santos 883.554.017-18 Codigo da remessa: Postado Codigo referencia: 005287555 Localizar remessa" Position="633, 350" ScreenshotGuid="07836de0-d68f-487c-886b-5fdcd630ef82" ServerVersion="1">
+                                                <uc:CVCache.CvUiElements>
+                                                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="16">
+                                                    <uc:CvElementInfo Category="InputBox" Region="354, 137, 192, 22" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="560, 138, 187, 22" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="560, 186, 187, 21" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="127, 122, 196, 22" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="354, 186, 193, 21" />
+                                                    <uc:CvElementInfo Category="Button" Region="26, 259, 295, 24" />
+                                                    <uc:CvElementInfo Category="Button" Region="25, 147, 298, 23" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="128, 209, 194, 22" />
+                                                    <uc:CvElementInfo Category="Icon" Region="1, 4, 22, 19" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="129, 234, 193, 22" />
+                                                    <uc:CvElementInfo Category="MaximizeButton" Region="684, 4, 19, 18" />
+                                                    <uc:CvElementInfo Category="MinimizeButton" Region="639, 5, 20, 16" />
+                                                    <uc:CvElementInfo Category="CloseButton" Region="731, 4, 18, 17" />
+                                                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="36, 147, 288, 24" />
+                                                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="315, 73, 449, 224" />
+                                                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="24, 280, 271, 9" />
+                                                  </scg:List>
+                                                </uc:CVCache.CvUiElements>
+                                                <uc:CVCache.OcrTexts>
+                                                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="64">
+                                                    <uc:OcrTextInfo Region="23, 5, 66, 16" Text="STLogistica" />
+                                                    <uc:OcrTextInfo Region="89, 7, 7, 11" Text="-" />
+                                                    <uc:OcrTextInfo Region="97, 6, 73, 12" Text="Rastreamento" />
+                                                    <uc:OcrTextInfo Region="173, 6, 16, 13" Text="de" />
+                                                    <uc:OcrTextInfo Region="189, 6, 43, 12" Text="Pacotes" />
+                                                    <uc:OcrTextInfo Region="233, 5, 29, 13" Text="v1.00" />
+                                                    <uc:OcrTextInfo Region="642, 4, 13, 12" Text="1" />
+                                                    <uc:OcrTextInfo Region="732, 5, 14, 14" Text="X" />
+                                                    <uc:OcrTextInfo Region="17, 40, 68, 41" Text="ST" />
+                                                    <uc:OcrTextInfo Region="90, 41, 213, 49" Text="Logistica" />
+                                                    <uc:OcrTextInfo Region="24, 98, 32, 12" Text="Alterar" />
+                                                    <uc:OcrTextInfo Region="56, 99, 20, 11" Text="lote" />
+                                                    <uc:OcrTextInfo Region="353, 98, 54, 14" Text="Informacao" />
+                                                    <uc:OcrTextInfo Region="408, 98, 14, 12" Text="da" />
+                                                    <uc:OcrTextInfo Region="423, 101, 41, 9" Text="remessa" />
+                                                    <uc:OcrTextInfo Region="24, 122, 37, 12" Text="Numero" />
+                                                    <uc:OcrTextInfo Region="62, 122, 15, 12" Text="do" />
+                                                    <uc:OcrTextInfo Region="77, 123, 23, 11" Text="lote:" />
+                                                    <uc:OcrTextInfo Region="130, 125, 38, 12" Text="671282" />
+                                                    <uc:OcrTextInfo Region="352, 122, 48, 12" Text="Remessa:" />
+                                                    <uc:OcrTextInfo Region="559, 122, 35, 14" Text="Codigo" />
+                                                    <uc:OcrTextInfo Region="595, 122, 14, 12" Text="de" />
+                                                    <uc:OcrTextInfo Region="610, 122, 49, 12" Text="referencia" />
+                                                    <uc:OcrTextInfo Region="660, 122, 14, 12" Text="da" />
+                                                    <uc:OcrTextInfo Region="675, 122, 21, 14" Text="loja:" />
+                                                    <uc:OcrTextInfo Region="355, 141, 64, 12" Text="03-00003125" />
+                                                    <uc:OcrTextInfo Region="562, 141, 56, 12" Text="001388835" />
+                                                    <uc:OcrTextInfo Region="140, 152, 43, 14" Text="Caregar" />
+                                                    <uc:OcrTextInfo Region="184, 152, 22, 12" Text="Lote" />
+                                                    <uc:OcrTextInfo Region="352, 170, 59, 11" Text="Destinatario:" />
+                                                    <uc:OcrTextInfo Region="559, 170, 25, 12" Text="CPF:" />
+                                                    <uc:OcrTextInfo Region="25, 186, 47, 14" Text="Pesquisar" />
+                                                    <uc:OcrTextInfo Region="73, 189, 46, 9" Text="remessas" />
+                                                    <uc:OcrTextInfo Region="355, 190, 34, 11" Text="Lorena" />
+                                                    <uc:OcrTextInfo Region="391, 190, 34, 11" Text="Santos" />
+                                                    <uc:OcrTextInfo Region="562, 189, 78, 12" Text="883.554.017-18" />
+                                                    <uc:OcrTextInfo Region="23, 210, 35, 14" Text="Codigo" />
+                                                    <uc:OcrTextInfo Region="59, 210, 14, 12" Text="da" />
+                                                    <uc:OcrTextInfo Region="74, 212, 44, 10" Text="remessa:" />
+                                                    <uc:OcrTextInfo Region="352, 220, 61, 15" Text="Postado" />
+                                                    <uc:OcrTextInfo Region="23, 234, 34, 15" Text="Codigo" />
+                                                    <uc:OcrTextInfo Region="59, 234, 52, 12" Text="referencia:" />
+                                                    <uc:OcrTextInfo Region="130, 236, 57, 14" Text="005287555" />
+                                                    <uc:OcrTextInfo Region="131, 265, 43, 11" Text="Localizar" />
+                                                    <uc:OcrTextInfo Region="175, 266, 41, 10" Text="remessa" />
+                                                  </scg:List>
+                                                </uc:CVCache.OcrTexts>
+                                              </uc:CVCache>
+                                            </scg:List>
+                                          </uc:CvCacheContainer.Caches>
+                                        </uc:CvCacheContainer>
+                                      </p:CVScope.DesignTimeCacheContainer>
+                                      <p:CVScope.OCREngine>
+                                        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                          <ActivityFunc.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                                          </ActivityFunc.Argument>
+                                          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Language="en" Profile="Screen" Scale="1" Timeout="100000">
+                                            <p1:UiPathScreenOCR.Image>
+                                              <InArgument x:TypeArguments="sd1:Image">
+                                                <mca:CSharpValue x:TypeArguments="sd1:Image" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">Image</mca:CSharpValue>
+                                              </InArgument>
+                                            </p1:UiPathScreenOCR.Image>
+                                          </p1:UiPathScreenOCR>
+                                        </ActivityFunc>
+                                      </p:CVScope.OCREngine>
+                                      <p:CVScope.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4b0df450-0788-43b7-9d88-c67129a1ccce" InformativeScreenshot="78e9f0564345bce7e9deaa11fdeae9d3" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </p:CVScope.Target>
+                                      <p:CVScope.UseLocalServer>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </p:CVScope.UseLocalServer>
+                                    </p:CVScope>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                            </Sequence>
+                          </ActivityAction>
+                        </ui:ForEachRow.Body>
+                      </ui:ForEachRow>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="631, 350, 768, 304" FilePath="C:\Users\Arnaldo\Downloads\STLOG\stlog.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAZNSURBVFhH7ZR7VNb1Hcd/EfBgExRoMyJFo8RLYpiilUyQxA2y2cqFIxmn6dE5Ey0UVK4iIGggig/KQ3gnRawpWnNdbLJzvOAVUARxYinPaq3Us0tiPa99vt/nZ3TZzE6e/vJzzvv8Hg6/7+f9+ly+P+NW3IpbcStudnAoMoHGCXD6OWj6NTQ8DXVjofZReDe0t/nazQnqIh6kUQzOTofzSdCeAheS5fcceP8FeG8WnHse/ir/b50qUJMFJgp299cy09x4cEgqORUPbZJUGV6YK6ZiqEz1U/5WOv+iAMwW85nw6j3wh16wow/sCoQ3+n43AEfzeBwnYnA0jBPjGc6kqjJVoYaQajWIqF5av8kHKn1h851Q9ROovksg/AWip0D0/gqEaXH9OFD1KJf3jcZxaBSOfSNw7AlxVlAjFVX7wZo7nFr7I1jXFdZ7wYbuTpBXBGTLj2FrD9h295cg7hOIoP8NkLWklOUVW7Ft2s6G6jeornmbnW/W8vbeOhaljKM8tRev5fhzZIUfn22WCm3uUC562SLyMGFMkI3end34AkLGoeB33d8JMCdl/ieXLl3mrb2Hybdu+r8A++qOc6y+icUrN1JQWom9TJKvug1Wu4huhzJXE8YEWecpENINBbFFQZjj2B4AO+91ApSs2RZ+of0DgoMH069ffwYMGMgDgwbTtasnGyu30HS6jZMtZ8kpXqMlR4iOjqbcZsNu7cbVFQaflRh8vtKAUpGCsQmI6sg3IGQcamyvyWLKKDRAxeaa8Hb7h4wcGUZY2E+JGP0YY8ZGk/jCXNIX5rK02EpqdgHZhTYmJfyWSfEJ9LjLT4PYl3fhXy8Z/LvQ4NNlBh3LTRDVFd0NE2K9gpBxqJ1Qi2mOQgOo+M+nV/D19aVnr94MDA5h8JBQxo57iqfjniNh2iyefCYetRsnTrUSPiaGBx8azkNDhmAvcuPiYoNL+QaXCwwNo0BUR76AUJ1QC7qhW+co1M2QLpj2htH2fjvvnbfTcuYcTS1tdHRclZEE8xsxnzxjDkEDBpGRX0Jh2RbcLRZyisp4/MkJ2JcYfLjQ4O/ZBv/IMTTMP5d+DcLmBhVdzFE4uyCW1+SM+pOnOX6ilWONLRypb6bx1BkcDgefiw4caeTw8SZSc5eRlltMet5yDZNZYNUA51MN2tMN/pZp8NGiTogrxQYOq9oJWU7pwpiHgwgICCAwMBBvb+9OcxX7Dzdg/+AjjjQ0U/OnWl5+pYZ1VTX8pa6e/YcbOXTsJPOzl7Jg0Uuk5hQ5QRav0ABnkw3aUpwg9gwnhBqJ2ouKyT74+/vTp08funfvTmhoKOOfGIfValUA3US3a4B39x9lypQpxE6cyOt/fIuMjAxWl9m4cqWDAyZASmY+87IKTJBC0vKKNUDzbIPWpE6Ic5keJKYt1Vd1WXmVLPdI4p+NIysrC09PT1JSUggKCsLd3T3R1dV1oAb484FjlK+tJDExkVGjRrFz12591WJiYjh41DmCuek5JGfkaZDp83OYlJTBRZl14wyDpkSDuKRMrNXbKdq4VZsrqcXu27cvsbGxJCcn4+bmtjIiIuKiPGPFPFCsLRqgVj4wPXsFYLVtYNiwYZp66rTfMXXqNF390fpTJC1YyNy0RRxvbKa55Qzv1NbpReo9IJjZ+bIX1gpGPpXApFnzlNHqa1K5IiMj8fPzWy+mURaLpYecc9XGKqr27OXnz07TC3JPzwDSs3L0rMLCwsjMzJalbKL+RAsvzssgPbeQV3ftYejQofj4+ODi4kI3H18ei3+eCTO/aixaJSqUVv9eNEysvEQu2vTLoQCuSUXH1asMGv0Ew4cPF42gtWE3fFxJ2QP36rZGRUWRl5dHXFycfC27ft1UySqGufKMk4qDxKKL6DZtdp2Qd10D5eAvFUhBQQElFWvZ9OY7lG7bQejjExkUOV4DhIeHk5a6gIMHD+oZm6aq2hJRquSIFt0tOd1E32p8LSxyeIRosihLtExUKlqlAJKWlPCrmQu0oVpOtVBD5Evo5eW1Q94pEsOZ8nxE8niLvtnmGwxFq6i9pRv9RD+TxNNF2ZK8WLRSVKJuiVqqkJAQtc3x8l5/OXOHef6mhqrE4uHhcaeYDBSz0QLzC1Oh5jZ/pzZ/n1AmSurLpa7QD2L6A4Rh/Bco+s+KYd8c+wAAAABJRU5ErkJggg==" InformativeScreenshot="50bf6b60fc2b91e749980b1417e64687.png" Selector="&lt;wnd app='stlog.exe' cls='AutoIt v3 GUI' title='ST Logística - Rastreamento de Pacotes v1.00'/&gt;" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Atualizar pedidos'" sap:VirtualizedContainerService.HintSize="868,156" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ce31c7c0-0436-4b47-a979-0f1ca5b972b6" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://marcelstein.com/elochallenge/starttest.php?token=8d4d7a9e295d146b3b0e245692d8754e" DesignTimeRectangle="144, 663, 149, 38" ElementType="Button" FriendlyName="'Atualizar pedidos'" FullSelectorArgument="&lt;webctrl aaname='Atualizar pedidos' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Atualizar pedidos' tag='BUTTON' type='' check:text='Atualizar pedidos' /&gt;" Guid="bf121b00-41fb-465f-817b-f003c1feec37" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJkAAAAqCAYAAACgAvlhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOXSURBVHhe7Zw9ktQwEIVJOBeH2pAqTrLXINwbQDoZIQnJhoRGT3Srntotj2dssTC8V/VqxpJG6p/P3o38bpGkyRJk0nR1kH35viwfnpfl/acy8VGW9xvMgB0wFNUgw6Tgko8aDEXQGmSgMPuRLN9qsMRqkOkpJp9lsMRqkGWLZfleswSZPMUsQSZPMUuQyVPMEmTyFLMEmTzFLEEmTzFLkMlTzBJk8hSz/n3IPi/La4n/pXzW66+/82nXD+CXnyXHb/318qNfE/1c5q+tmWnWeZBZs7kYf8SCLPVDQoakXpF88VMy/1SKNJo75AjZAzpCtscPCdml7IFG4/NSniZxXpDdb0EG40+UAVRhCsnVxztrY20GTS0YqYM4rrc/l882D+gz+foaA6lrpu9d9sQn5Pt2phi6XJMmx/NWN6Tt5UI8EbIMui7Pcm4KmdWmyfrAazZrfYNZp0DWJU0F5zXZk2wXZOXzwgW1QvF8t97mUxiK45P2wufbXm3erq8+gX1dEeddG0/7r2owOI/j86ZvQYZz+LqBHM8u4vh8b6/VKr4Sx98BmRWGg8/utFUCPsZNhpP9ojtQ4voyDmWQIa7VecHZDXO10KN1IRbEHfPiJ0769CmO9eTrrK5w3CveXNn46Px7zDoMWQbKEKhsLCYVoaEx1q2Q1bOScRiFZkXItoCvHq3jcfueymoAeDIQtiADGDzn7oCxs7Pcu99TjFdzvmLWYchig1hcsHshq8Wia7i7K8P6FLK4xuzgcZxdQwe/W3m0jsfte9Zo95tD5rYaQldzH5h1DLKsoWYUggEaQhbGfE9PLnvM3wpZbNLWeDcW9x55sC7ml+XCjjVz43ccJ8dYYaIzeA3vNTp7K6asPnvNOgRZd7dEx2YnzffmcJJIGvKGxUTrmUV7IRs1oc1R/P5kuxcyqOVnY1nsXAOcGWPnevhveJ+uJsk5nkeWG+cSa4Nrju3tIbPkRncBnN2BVZRYK4jp2fZtxbBrF87r7r643hpVi2XfM/l6hxpCrFkDuTGpfV05j2PNGuTQNBEI1SFm5BmbvWq+ne/CXD0n7B1rHedjbFn8e806/D+ZXLwXxv/ILEF2hgXZyixBdoYF2cosQXaGBdnKLEEmTzFLkMlTzBJk8hSzBJk8xSxBJk8xq0GmV0fJZ3n46ii9BE8+y8OX4Ol1nvIZBkPD13lCmASFgk2+1WAG7ETAoA4ySZohQSZN1rL8Ar8mkidgBQ4qAAAAAElFTkSuQmCC" InformativeScreenshot="efad78a7cafea7002ddad1088fc4a133.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge - Controle de Pedidos' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMSSURBVDhPZVNvTI1xFH7uvZVKLGXrpqSr8cFqFcsWk7YKm82fSnc1a6Fu61YrW+GKW1OIS5NoYm01WURCsUXC8MWfZdKM1SfLNH83fMjweOouHzjvnvd9t985zznnOb+DKVvk/hjT9esCHKeAO+eBVy1CNvBgFrBP5xuF5YJF8BbcliLMAXzkseU2MPAEGH9pMnHAw4MOHx8uDTZzpt/0H3L7IrwVnglHhVCs1dtfbPXAjkHg85inJ/tiY9mVn8/ylBQW5uWxYq+Laek2zp4dRLlP4btQMPlXAWQOAB++6uCNvz9v7d/PvdXVtGZlsbX1HK3WXczOrmJy8gYaDH8JJiqqQCIQ1gPcH1XmYYuF37y8+CI0lOmRkUxSBR0dHWxp6WJz8zWWlzsYFmahh4fnBME3IUcPcruBr70REbx67BivR0fzkzLckAbLAgNZUFgokgvs6enmgQMnmJPjZHx8Er2MhvEAYA8OAk2Pgd93N2/m65ER1qv0ewkJ/KhKLoooWiJaRF5ZWUmX6wzt9lrudNRwoY83k4GbOALceG4w8JHTydGxMdapijKbja1qZ0QEbcJCTWOT1crOzsu81XeXpXk2bjUZmQ88QS3Q/VQE3VK9obFRYmUzZO5cBihot4I1GTYLiyXuqjVraCsoYMXq1TylFrcBj1GoFi4Bv5xRUSwrK2NRURFjYmImlQ6UsI3z5/OZ2jktwo0a756qKp5ITeVhnetWXUMmkN4FfKydMYNBAQEak4EmsUeob3NwMEtzc3k2Lo79CmgPCWFzSQld4eHcoXuQBBQjEgg8Dly2ymEi6xRS09KYkZExqUmlKjupCntVSbuvL+uUYCvwcB4QgTp5bwASw4HhqeBZfn7MysxkfUMDB4eG2NffzyaHg21mMxt1XgK8WwFsku9fMxqBjAkS7QVLvb25fcECtkvQK3Y7z0i0Qwp2KXOxdkHjsytmmipwm9n9Ma0EVsqhsxp4XwP8bBKZ2qNTItu0J9rK3nhgnXy9gt0x/1uINFmirhKAk2qtcz3QpYz1UdqXUOCfOOAPd/Rqo6OCYEIAAAAASUVORK5CYII=" InformativeScreenshot="b803f0f4af10a8c5bafd7c1c2394f009.png" Selector="&lt;html app='msedge.exe' title='EloGroup - RPA Challenge - Controle de Pedidos'/&gt;" Url="[&quot;http://marcelstein.com/elochallenge/starttest.php?token=&quot; + token]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
